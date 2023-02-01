@@ -1,7 +1,8 @@
 # Scientific_calculator
-I have completed first JavaScript Practical using HTML, CSS, Javascript. 
 
-For all the mathematical operation I used Javascript math function such as Trigonometery. 
+I have completed first JavaScript Practical using HTML, CSS, Javascript and uploaded my code in calculator branch. 
+
+For all the mathematical operation I used Javascript math function such as Trigonometery, modulus and exponential etc. 
 
 I use JavaScript to disable or enable a button. 
 
