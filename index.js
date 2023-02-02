@@ -3,7 +3,17 @@ let button_change = 0;
 let trigo_button = 0;
 let fun_body = 0;
 let memory = [];
-
+let reusable = () => {
+        document.getElementById("trigo_fun_body").style.display = "";
+        document.getElementById("trigo_fun_sin").style.display = "";
+        document.getElementById("trigo_fun_sec").style.display = "";
+        document.getElementById("trigo_fun_sin_1").style.display = "";
+        document.getElementById("trigo_fun_sec_1").style.display = "";
+        document.getElementById("trigo_fun_sinh").style.display = "";
+        document.getElementById("trigo_fun_sech").style.display = "";
+        document.getElementById("trigo_fun_sinh_1").style.display = "";
+        document.getElementById("trigo_fun_sech_1").style.display = "";
+}
 function second_button_display_Change() {
     if (color_change == 0) {
         const elems = document.getElementsByClassName('second_change');
@@ -31,8 +41,6 @@ function second_button_display_Change() {
         const elems = document.getElementsByClassName('second_change');
         for (let i = 0; i < elems.length; i++) {
             elems[i].style.display = "block";
-            console.log("else for");
-
         }
         const elem1 = document.getElementsByClassName('second_changed');
         for (let i = 0; i < elem1.length; i++) {
@@ -41,7 +49,6 @@ function second_button_display_Change() {
         }
         document.getElementById('second_button').style.backgroundColor = "";
         color_change = 0;
-        console.log(color_change)
         button_change = 0;
     }
     //if function drpdown or trigo dropdown is open then it will close when click on 2nd 
@@ -49,15 +56,8 @@ function second_button_display_Change() {
         document.getElementById('fun_1st_row').style.display = "";
         document.getElementById('fun_2nd_row').style.display = "";
         fun_body = 0;
-        document.getElementById("trigo_fun_body").style.display = "";
-        document.getElementById("trigo_fun_sin").style.display = "";
-        document.getElementById("trigo_fun_sec").style.display = "";
-        document.getElementById("trigo_fun_sin_1").style.display = "";
-        document.getElementById("trigo_fun_sec_1").style.display = "";
-        document.getElementById("trigo_fun_sinh").style.display = "";
-        document.getElementById("trigo_fun_sech").style.display = "";
-        document.getElementById("trigo_fun_sinh_1").style.display = "";
-        document.getElementById("trigo_fun_sech_1").style.display = "";
+        //reusabalitiy of code usign an anonymous function
+        reusable();
         trigo_button = 0;
     }
 }
@@ -69,20 +69,10 @@ function trigo_fun() {
         document.getElementById("trigo_fun_sin").style.display = "flex";
         document.getElementById("trigo_fun_sec").style.display = "flex";
         trigo_button = 1;
-        // trigo_fun_sin = 1;
-        // trigo_fun_sec = 1;
-        // second_trigo_fun_sin = 1;
     }
     else {
-        document.getElementById("trigo_fun_body").style.display = "";
-        document.getElementById("trigo_fun_sin").style.display = "";
-        document.getElementById("trigo_fun_sec").style.display = "";
-        document.getElementById("trigo_fun_sin_1").style.display = "";
-        document.getElementById("trigo_fun_sec_1").style.display = "";
-        document.getElementById("trigo_fun_sinh").style.display = "";
-        document.getElementById("trigo_fun_sech").style.display = "";
-        document.getElementById("trigo_fun_sinh_1").style.display = "";
-        document.getElementById("trigo_fun_sech_1").style.display = "";
+        //reusabalitiy of code usign an anonymous function
+        reusable();
         trigo_button = 0;
     }
     if (fun_body == 1) {
@@ -90,9 +80,6 @@ function trigo_fun() {
         document.getElementById('fun_2nd_row').style.display = "";
         fun_body = 0;
     }
-    // else{
-
-    // }
 }
 function fun_body_display() {
     if (fun_body == 0) {
@@ -107,15 +94,8 @@ function fun_body_display() {
         fun_body = 0;
     }
     if (trigo_button == 1) {
-        document.getElementById("trigo_fun_body").style.display = "";
-        document.getElementById("trigo_fun_sin").style.display = "";
-        document.getElementById("trigo_fun_sec").style.display = "";
-        document.getElementById("trigo_fun_sin_1").style.display = "";
-        document.getElementById("trigo_fun_sec_1").style.display = "";
-        document.getElementById("trigo_fun_sinh").style.display = "";
-        document.getElementById("trigo_fun_sech").style.display = "";
-        document.getElementById("trigo_fun_sinh_1").style.display = "";
-        document.getElementById("trigo_fun_sech_1").style.display = "";
+        //reusabalitiy of code usign an anonymous function
+        reusable();
         trigo_button = 0;
     }
 }
