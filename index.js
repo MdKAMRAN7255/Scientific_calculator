@@ -3,6 +3,7 @@ let button_change = 0;
 let trigo_button = 0;
 let fun_body = 0;
 let memory = [];
+
 let reusable = () => {
         document.getElementById("trigo_fun_body").style.display = "";
         document.getElementById("trigo_fun_sin").style.display = "";
